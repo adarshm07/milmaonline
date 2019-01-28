@@ -89,7 +89,7 @@ text-align:center;
 	define('DB_PASSWORD', '');
 	define('DB_DATABASE', 'milma_magazine');
 	$db = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
-
+global $pass;
 $pwd=$_POST['pass'];
 $wp=md5($pwd);
 $s="select * from empreg where name='".$_POST['user']."' and pwd='$wp'";
@@ -99,7 +99,7 @@ $result=mysqli_query($db,$s);
 
 
 $_SESSION['uname']=$_POST['user'];
-if($_POST['user']=='admin'&&$_POST['pass']=="123")
+if($_POST['user']=='admin'&& $_POST['pass']=="123")
 {
 header('location:d-page/adminhome.php');
 }

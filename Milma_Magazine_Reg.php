@@ -76,13 +76,13 @@ text-align:center;
 
 					<div class="wrap-input100 validate-input" data-validate = "Password is required">
 						<span class="label-input100">Password</span>
-						<input class="input100" type="text" name="pass" placeholder="*************">
+						<input class="input100" type="password" name="pass" placeholder="*************">
 						<span class="focus-input100"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate = "Repeat Password is required">
 						<span class="label-input100">Confirm Password</span>
-						<input class="input100" type="text" name="pass2" placeholder="*************">
+						<input class="input100" type="password" name="pass2" placeholder="*************">
 						<span class="focus-input100"></span>
 					</div>	<div class="wrap-input100 validate-input" data-validate = "Repeat Password is required">
 						<span class="label-input100">Profile Pic</span>

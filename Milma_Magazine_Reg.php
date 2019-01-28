@@ -140,7 +140,8 @@ if ($_POST['pass']!= $_POST['pass2'])
  }else{
 			$query = mysqli_query($db, "INSERT INTO register values('null','".$_POST['name']."','".$_POST['username']."','".$_POST['email']."','$wp','".$_FILES['upload']['name']."','user')");
 			?>
- <script>alert('Thank You! you are now registered');</script>
+ <script>alert('Thank You! you are now registered');
+ window.location.href = "index.php";</script>
  <?php
 			}
 		}

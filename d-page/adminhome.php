@@ -48,12 +48,6 @@
             <ul class="nav">
                 <li class="active">
                     <a href="adminhome.php">
-                        <i class="pe-7s-graph"></i>
-                        <p>Dashboard</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="adminhome.php">
                         <i class="pe-7s-user"></i>
                         <p>View Users</p>
                     </a>

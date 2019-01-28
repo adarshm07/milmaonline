@@ -48,12 +48,6 @@
             <ul class="nav">
                 <li class="active">
                     <a href="adminhome.php">
-                        <i class="pe-7s-graph"></i>
-                        <p>Dashboard</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="adminhome.php">
                         <i class="pe-7s-user"></i>
                         <p>View Users</p>
                     </a>
@@ -142,8 +136,10 @@
                               <?Php echo $row['address'];    ?>
                           </td>
                           <td>
-							<a href="#del<?php echo $row['id']; ?>" data-toggle="modal" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> Delete</a>
-							<?php include('button.php'); ?>
+							
+                            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#active<?php echo $row['id']?>" <?php if($row['status'] == '1') { echo 'disabled'; }?>><?php
+          if($row['status'] == '1') { echo 'Activated'; } else {  echo 'Active'; }
+           ?></button></td>
 						</td>
 					</tr>
 					<?php
@@ -154,7 +150,23 @@
 		</table>
 	</div>
                   
-
+    <div class="modal fade" id="active<?php echo $row['id']?>" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Are you sure ?</h4>
+        </div>
+        <div class="modal-body">
+          <p>Want to activated this record? ?</p>
+          <form action="edit_status.php?id=<?php echo $row['id']?>" method="post">
+            <input type="hidden" name="status" value="1"></input>
+        
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+         <button type="submit" class="btn btn-success">Activate</button>
+        </div>
                           
                         </div>
                     </div>

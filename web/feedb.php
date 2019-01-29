@@ -12,7 +12,7 @@ header('location:.././');
 <html lang="zxx">
 
 <head>
-    <title>Arable Agriculture Category Bootstrap responsive Web Template | Home :: w3layouts</title>
+    <title>Milma</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <meta name="keywords" content="Arable a Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -39,7 +39,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         .select{
             text-transform: none;
     border: 1px solid;
-    width: -webkit-fill-available;
+    width: 400px;
+    padding: 10px;
+    margin: 10px;
         }
         </style>
 </head>
@@ -166,13 +168,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </div>
         <!-- main image slider container -->
 		<br /><br /><br />
-		<div style="text-align:center;">
+		<div class="container" style="text-align:center;">
    
 								<center><table>
                                 <h2>Feedback</h2>
                                 <br>
-								<tr>    <form method="post" action="feedbc.php">
+								<tr><form method="post" action="feedbc.php">
                                 <th>Name</th><td><input type="text" name="name" class="select"></td></tr>
+                                <th>Email</th><td><input type="text" name="email" class="select"></td></tr>
 								<th>Choose Category</th><td>
                                     <select name="category" class="select">
                                         <option>Product</option>
@@ -182,9 +185,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 </td>
 								</tr>
 								<tr>
-								<th>Feedback</th><td><br /><br /><textarea name="feedb"></textarea></td>
+								<th>Feedback</th><td><textarea name="feedb" class="select"></textarea></td>
 								</tr>
-								<tr><td><input type="submit" value="Submit" name="submit"/></td></form></tr>
+								<tr><td><input type="submit" value="Submit" name="submit"  /></td></form></tr>
 								</table>
 					
 						

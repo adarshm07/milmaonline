@@ -102,8 +102,6 @@
                 </div>
             </div>
         </nav>
-
-
         <div class="content">
             <div class="container-fluid">
 
@@ -111,20 +109,20 @@
                          <div class="container">
 	<div style="height:50px;"></div>
 	<div class="well" style="margin:auto; padding:auto; width:80%;">
-	<span style="font-size:25px; color:blue"><center><strong>Users</strong></center></span>	
+	<span style="font-size:25px; color:blue"><center><strong>Feedback</strong></center></span>	
 		<div style="height:50px;"></div>
 		<table class="table table-striped table-bordered table-hover">
 			<thead>
-				<th>Firstname</th>
-				<th>Lastname</th>
+				<th>Name</th>
+				<th>Category</th>
 				<th>Email</th>
-				<th>Action</th>
+				<th>Feedback</th>
             </thead>
             
             <?php
 				include('conn.php');
  
-				$query=mysqli_query($conn,"select * from `register` where uname!='admin'");
+				$query=mysqli_query($conn,"select * from `feedb`");
 				while($row=mysqli_fetch_array($query)){
 					?>
 
@@ -132,19 +130,19 @@
                       <tbody><br />
                         <tr>
                           <td>
-                             <?Php echo $row['uname'];    ?>
+                             <?Php echo $row['name'];    ?>
                           </td>
                           <td>
-                            <?Php echo $row['lname'];    ?>
+                            <?Php echo $row['category'];    ?>
                           </td>
                         
                           <td>
                               <?Php echo $row['email'];    ?>
                           </td>
                           <td>
-							<a href="#del<?php echo $row['id']; ?>" data-toggle="modal" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> Delete</a>
-							<?php include('button.php'); ?>
-						</td>
+                              <?Php echo $row['feedb'];    ?>
+                          </td>
+                          
 					</tr>
 					<?php
 				}
@@ -153,49 +151,3 @@
 			</tbody>
 		</table>
 	</div>
-                  
-
-                          
-                        </div>
-                    </div>
-
-                    </div>
-                </div>
-</div>
-
-
-              
-
-
-     
-
-    </div>
-</div>
-
-
-</body>
-
-    <!--   Core JS Files   -->
-    <script src="assets/js/jquery.3.2.1.min.js" type="text/javascript"></script>
-	<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
-
-
-
-	<script type="text/javascript">
-    	$(document).ready(function(){
-
-        	demo.initChartist();
-
-        	$.notify({
-            	icon: 'pe-7s-gift',
-            	message: "Welcome <b>Admin"
-
-            },{
-                type: 'info',
-                timer: 4000
-            });
-
-    	});
-	</script>
-
-</html>

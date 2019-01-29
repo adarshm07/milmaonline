@@ -3,7 +3,7 @@ Bugs not fixed:
 
 Employee
 
-Employee Sign In and Sign up.
+Employee Sign In and Sign up page.
 Anyone can sign into employee without sign up.
 Activate (Delivered) button in Employee Orders page.
 Loan procedure for employees.
